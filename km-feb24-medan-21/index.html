@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pizza Place Sales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-logo">Pizza Place Dashboard</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="descriptions.html" class="nav-link">Descriptions</a></li>
+                </ul>            
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h1>DASHBOARD PIZZA PLACE SALES</h1>
+            <p>TEAM 21 MEDAN</p>
+        </section>
+        <section class="stats-grid"> 
+            <div class="stat-card">
+                <h2>Total Revenue</h2>
+                <p id="totalRevenue">$0</p>
+            </div>
+            <div class="stat-card">
+                <h2>Quantity Sold</h2>
+                <p id="quantitySold">0</p>
+            </div>
+            <div class="stat-card">
+                <h2>Total Customers</h2>
+                <p id="total-customers">0</p>
+            </div>
+            <div class="stat-card">
+                <h2>Top Category Sales</h2>
+                <p id="topCategorySale">0</p>
+            </div>
+        </section>
+        <section class="chart-grid">
+            <div class="chart-card">
+                <h3>Pizza's Sold by Size</h3>
+                <select id="sizeDropdown" class="dropdown">
+                    <option value="All">All</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+                <canvas id="sizeChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Total Revenue by Month</h3>
+                <select id="monthDropdown" class="dropdown" >
+                    <option value="All">All</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <canvas id="monthlySalesChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Revenue by Category With Bar Chart</h3>
+                <select id="categoryRevenueDropdown" class="dropdown">
+                    <option value="All">All</option>
+                    <option value="Veggie">Veggie</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Classic">Classic</option>
+                    <option value="Supreme">Supreme</option>
+                </select>
+                <canvas id="revenueCategoryChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Pizza's Sold by Category</h3>
+                <select id="categoryDropdown" class="dropdown">
+                    <option value="All">All</option>
+                    <option value="Veggie">Veggie</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Classic">Classic</option>
+                    <option value="Supreme">Supreme</option>
+                </select>
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </section>
+        <section class="grid-2">
+            <div class="table-card">
+                <h3>Total Revenue by Size</h3>
+                <table id="size-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-card">
+                <h3>Total Revenue by Category</h3>
+                <table id="category-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 Pizza Place Dashboard. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
